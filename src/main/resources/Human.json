@@ -1,0 +1,38 @@
+[
+  {
+    "id": 234235,
+    "name": "Gosh",
+    "coordinates": {
+      "x": 4.0,
+      "y": 10
+    },
+    "creationDate": "Jul 24, 2022, 3:26:17 AM",
+    "realHero": true,
+    "hasToothpick": false,
+    "impactSpeed": 789.1,
+    "soundtrackName": "SoskaSosalki",
+    "minutesOfWaiting": 100.0,
+    "weaponType": "BAT",
+    "car": {
+      "name": "Lada"
+    }
+  },
+  {
+    "id": 234234,
+    "name": "Jim",
+    "coordinates": {
+      "x": 4.0,
+      "y": 10
+    },
+    "creationDate": "Jul 24, 2022, 3:26:17 AM",
+    "realHero": true,
+    "hasToothpick": false,
+    "impactSpeed": 789.1,
+    "soundtrackName": "SoskaSosalki",
+    "minutesOfWaiting": 100.0,
+    "weaponType": "BAT",
+    "car": {
+      "name": "Lada"
+    }
+  }
+]
