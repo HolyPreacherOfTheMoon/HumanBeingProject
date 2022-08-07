@@ -5,9 +5,11 @@ import Common.HumanBeing;
 public class UpdateCommand extends Command {
 
   private HumanBeing insert;
+  private Integer id;
 
-  UpdateCommand(HumanBeing insert) {
+  public UpdateCommand(HumanBeing insert, Integer id) {
     this.insert = insert;
+    this.id=id;
   }
 
   @Override
@@ -16,6 +18,7 @@ public class UpdateCommand extends Command {
     if (updating != null) {
       list.remove(updating);
       list.add(insert);
+      insert.setId(id);
     }
   }
 

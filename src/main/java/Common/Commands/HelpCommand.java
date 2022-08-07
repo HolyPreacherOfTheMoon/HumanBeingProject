@@ -27,6 +27,6 @@ public class HelpCommand extends Command {
         + "•\tremove_greater {element}: удалить из коллекции все элементы, превышающие заданный\n"
         + "•\tremove_any_by_weapon_type weaponType : удалить из коллекции один элемент, значение поля weaponType которого эквивалентно заданному\n"
         + "•\tfilter_contains_soundtrack_name soundtrackName : вывести элементы, значение поля soundtrackName которых содержит заданную подстроку\n"
-        + "•\tprint_field_descending_minutes_of.waiting : вывести значения поля minutesOfWaiting всех элементов в порядке убывания\n");
+        + "•\tprint_field_descending_minutes_of_waiting : вывести значения поля minutesOfWaiting всех элементов в порядке убывания\n");
   }
 }

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class RemoveCommand extends Command{
   private Integer id;
-  RemoveCommand(Integer id) {
+  public RemoveCommand(Integer id) {
     this.id=id;
   }
 

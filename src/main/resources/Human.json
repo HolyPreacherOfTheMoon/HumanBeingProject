@@ -29,10 +29,45 @@
     "hasToothpick": false,
     "impactSpeed": 789.1,
     "soundtrackName": "SoskaSosalki",
-    "minutesOfWaiting": 100.0,
+    "minutesOfWaiting": 44.0,
     "weaponType": "BAT",
     "car": {
       "name": "Lada"
+    }
+  },
+  {
+    "id": 1178958211,
+    "name": "io\u0027",
+    "coordinates": {
+      "x": 2.0,
+      "y": 11
+    },
+    "creationDate": "Aug 7, 2022, 12:03:24 AM",
+    "realHero": true,
+    "hasToothpick": true,
+    "impactSpeed": 90.0,
+    "soundtrackName": "Koi",
+    "minutesOfWaiting": 1.0,
+    "weaponType": "BAT",
+    "car": {
+      "name": "sdfsd"
+    }
+  },
+  {
+    "id": 1894211126,
+    "name": "oppp",
+    "coordinates": {
+      "x": 111.0,
+      "y": 22
+    },
+    "creationDate": "Aug 7, 2022, 12:16:28 AM",
+    "realHero": true,
+    "hasToothpick": true,
+    "impactSpeed": 300.0,
+    "soundtrackName": "",
+    "minutesOfWaiting": 900.0,
+    "car": {
+      "name": ""
     }
   }
 ]

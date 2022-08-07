@@ -1,8 +1,12 @@
 package Common;
 
 import Common.Exceptions.InvalidPersonCreationArgumentException;
+import java.io.BufferedReader;
+import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
+import java.util.Random;
 
 public class HumanBeing implements Comparable<HumanBeing> {
 
@@ -18,7 +22,138 @@ public class HumanBeing implements Comparable<HumanBeing> {
   private WeaponType weaponType; //Can be null
   private Car car; //Can be null
 
-  public HumanBeing() {
+  private HumanBeing(int id, String name, Coordinates coordinates, Date creationDate,
+      boolean realHero,
+      boolean hasToothpick, Float impactSpeed, String soundtrackName, float minutesOfWaiting,
+      WeaponType weaponType, Car car) {
+    this.id = id;
+    this.name = name;
+    this.coordinates = coordinates;
+    this.creationDate = creationDate;
+    this.realHero = realHero;
+    this.hasToothpick = hasToothpick;
+    this.impactSpeed = impactSpeed;
+    this.soundtrackName = soundtrackName;
+    this.minutesOfWaiting = minutesOfWaiting;
+    this.weaponType = weaponType;
+    this.car = car;
+  }
+
+  public static HumanBeing createHumanBeing(List<HumanBeing> list, BufferedReader br)
+      throws IOException {
+    try {
+      Integer id;
+      String name, currentInput, soundtrackName;
+      boolean isReal, hasToothpick;
+      float impactSpeed;
+      float minutesOfWaiting;
+      Coordinates coordinates;
+      WeaponType weaponType1 = null;
+
+      while (true) {
+        System.out.println("Пожалуйста, введите имя челоека.");
+        name = br.readLine();
+        if (name.equals("")) {
+          System.out.println("Имя не может быть пустым, пожалуйста, повторите ввод.");
+        } else {
+          break;
+        }
+      }
+
+      coordinates = Coordinates.createCoordinates();
+
+      while (true) {
+        System.out.println("Пожалуйста, введите, реальный человек или нет. Y/N");
+        currentInput = br.readLine();
+        if (currentInput.equals("N")) {
+          isReal = false;
+          break;
+        } else {
+          if (currentInput.equals("Y")) {
+            isReal = true;
+            break;
+          } else {
+            System.out.println("Пожалуйста, повторите ввод.");
+          }
+        }
+      }
+
+      while (true) {
+        System.out.println("Пожалуйста, введите, есть ли у человека зубочистка во рту. Y/N");
+        currentInput = br.readLine();
+        if (currentInput.equals("N")) {
+          hasToothpick = false;
+          break;
+        } else {
+          if (currentInput.equals("Y")) {
+            hasToothpick = true;
+            break;
+          } else {
+            System.out.println("Пожалуйста, повторите ввод.");
+          }
+        }
+      }
+
+      while (true) {
+        System.out.println(
+            "Пожалуйста, введите скорость столкновения (атрибут должен быть больше -972)");
+        currentInput = br.readLine();
+        if (isDigit(currentInput)) {
+          if (Float.parseFloat(currentInput) > -972) {
+            impactSpeed = Float.parseFloat(currentInput);
+            break;
+          } else {
+            System.out.println("Вы ввели некорректное значение, пожалуйста, повторите ввод.");
+          }
+        } else {
+          System.out.println("Вы ввели некорректное значение, пожалуйста, повторите ввод.");
+        }
+      }
+
+      System.out.println("Пожалуйста, введите называние саундтрека человека.");
+      soundtrackName = br.readLine();
+
+      while (true) {
+        System.out.println("Пожалуйста, введите, сколько человек готов ждать.");
+        currentInput = br.readLine();
+        if (isDigit(currentInput)) {
+          minutesOfWaiting = Float.parseFloat(currentInput);
+          break;
+        } else {
+          System.out.println("Вы ввели некорректное значение, пожалуйста, повторите ввод.");
+        }
+      }
+      boolean checker = false;
+      while (!checker) {
+        System.out.println("Пожалуйста, введите тип оружия у человека. (SHOTGUN/RIFLE/BAT/NULL)");
+        currentInput = br.readLine();
+        switch (currentInput) {
+          case "SHOTGUN" -> {
+            weaponType1 = WeaponType.SHOTGUN;
+            checker = true;
+          }
+          case "RIFLE" -> {
+            weaponType1 = WeaponType.RIFLE;
+            checker = true;
+          }
+          case "BAT" -> {
+            weaponType1 = WeaponType.BAT;
+            checker = true;
+          }
+          case "NULL" -> checker = true;
+          default -> System.out.println("Вы ввели некорректное значение, пожалуйста, повторите ввод.");
+        }
+      }
+
+      System.out.println("Пожалуйста, введите название машины человека.");
+      Car car = new Car(br.readLine());
+      id = HumanBeing.generateID(list);
+      return new HumanBeing(id, name, coordinates, new Date(), isReal, hasToothpick, impactSpeed,
+          soundtrackName, minutesOfWaiting, weaponType1, car);
+    } catch (Exception e) {
+      System.out.println("Что-то пошло не так при создании объекта! Возвращен пустой объект");
+      return new HumanBeing(-1, "", null, new Date(), false, false, (float) 0, "", 0, null, null);
+    }
   }
 
   public int getId() {
@@ -171,5 +306,31 @@ public class HumanBeing implements Comparable<HumanBeing> {
   @Override
   public int compareTo(HumanBeing o) {
     return Integer.compare(this.getId(), o.getId());
+  }
+
+  private static boolean isDigit(String string) {
+    try {
+      Float.parseFloat(string);
+      return true;
+    } catch (NumberFormatException e) {
+      return false;
+    }
+  }
+
+  private static Integer generateID(List<HumanBeing> list) {
+    Random random = new Random();
+    int id = 1;
+    boolean checker = false;
+    while (!checker) {
+      checker = true;
+      id = random.ints(1, 1, Integer.MAX_VALUE).findFirst().getAsInt();
+      for (HumanBeing humanBeing : list) {
+        if (humanBeing.getId() == id) {
+          checker = false;
+          break;
+        }
+      }
+    }
+    return id;
   }
 }

@@ -15,5 +15,6 @@ public class PrintFieldDescendingMinutesOfWaitingCommand extends Command{
 
     Comparator<Float> comparator = Comparator.reverseOrder();
     minutes.sort(comparator);
+    minutes.stream().sorted(comparator).forEach(x-> System.out.println(x));
   }
 }

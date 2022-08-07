@@ -4,38 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe9e049b-35fe-48d4-8f9e-44159a7edeaa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Client/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/CommandDeterminator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/AddCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/AddIfMinCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/Command.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/FilterContainsSoundtrackNameCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/HeadCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/PrintFieldDescendingMinutesOfWaitingCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/RemoveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/SaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/UpdateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Exceptions/InvalidPersonCreationArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/Exceptions/RecurrentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/HumanBeing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/JsonJavaInstrument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Common/WeaponType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Human.json" afterDir="false" />
+    <list default="true" id="fe9e049b-35fe-48d4-8f9e-44159a7edeaa" name="Changes" comment="0.1&#10;TODO: RecurrentException, UpdateCommand, Main, Build">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Client/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Client/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/CommandDeterminator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/CommandDeterminator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Commands/HelpCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/HelpCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Commands/PrintFieldDescendingMinutesOfWaitingCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/PrintFieldDescendingMinutesOfWaitingCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Commands/RemoveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/RemoveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/Coordinates.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Common/HumanBeing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Common/HumanBeing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Human.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Human.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,8 +94,21 @@
       <workItem from="1659032111774" duration="9449000" />
       <workItem from="1659130993429" duration="4932000" />
       <workItem from="1659380256314" duration="1805000" />
-      <workItem from="1659396722586" duration="2756000" />
+      <workItem from="1659396722586" duration="3775000" />
+      <workItem from="1659468836092" duration="1675000" />
+      <workItem from="1659571188783" duration="2847000" />
+      <workItem from="1659619872476" duration="1312000" />
+      <workItem from="1659740140012" duration="3635000" />
+      <workItem from="1659817143945" duration="5964000" />
     </task>
+    <task id="LOCAL-00001" summary="0.1&#10;TODO: RecurrentException, UpdateCommand, Main, Build">
+      <created>1659399657756</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1659399657756</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,5 +124,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="0.1&#10;TODO: RecurrentException, UpdateCommand, Main, Build" />
+    <option name="LAST_COMMIT_MESSAGE" value="0.1&#10;TODO: RecurrentException, UpdateCommand, Main, Build" />
   </component>
 </project>
